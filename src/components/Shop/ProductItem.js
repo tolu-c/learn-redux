@@ -8,6 +8,7 @@ const ProductItem = (props) => {
   const { name, price, description, id } = props;
 
   const addToCart = () => {
+    // fetch http request
     dispatch(
       cartActions.addItemToCart({
         id: id,
