@@ -6,7 +6,7 @@ import Products from "./components/Shop/Products";
 import Notification from "./components/UI/Notification";
 import { uiActions } from "./store/ui-slice";
 
-let isInitial;
+let isInitial = true;
 
 function App() {
   const dispatch = useDispatch();
