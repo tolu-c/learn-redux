@@ -16,7 +16,6 @@ function App() {
 
   useEffect(() => {
     dispatch(fetchCartData());
-    console.log('fetching data...');
   }, [dispatch]);
 
   useEffect(() => {
@@ -24,8 +23,9 @@ function App() {
       isInitial = false;
       return;
     }
-    dispatch(sendCartData(cart));
-    console.log("sending data...");
+    if (cart.changed) {
+      dispatch(sendCartData(cart));
+    }
   }, [cart, dispatch]);
 
   return (
